@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranav Appasaheb Tekale | CS Student Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░░ NAVBAR ░░ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">PAT<span class="accent">.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"         class="nav-link active">Home</a></li>
+      <li><a href="#about"        class="nav-link">About</a></li>
+      <li><a href="#education"    class="nav-link">Education</a></li>
+      <li><a href="#skills"       class="nav-link">Skills</a></li>
+      <li><a href="#experience"   class="nav-link">Experience</a></li>
+      <li><a href="#projects"     class="nav-link">Projects</a></li>
+      <li><a href="#certificates" class="nav-link">Certificates</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact"      class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="home">
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo">
+          <img id="heroImg" src="images/profile.jpg" alt="Pranav Appasaheb Tekale"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <svg id="heroImgFallback" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <circle cx="60" cy="45" r="28" fill="#5b6cff" opacity="0.9"/>
+            <ellipse cx="60" cy="100" rx="38" ry="26" fill="#5b6cff" opacity="0.7"/>
+          </svg>
+        </div>
+      </div>
+      <p class="hero-greeting">Hello! I'm</p>
+      <h1 class="hero-name">Pranav Appasaheb Tekale<span class="cursor">|</span></h1>
+      <p class="hero-role" id="typedRole"></p>
+      <div class="hero-btns">
+        <a href="assets/resume.pdf" download class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Download Resume
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+      </div>
+      <!-- Social Links -->
+      <div class="hero-socials">
+        <a href="https://github.com/pranavtekale09" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.82 8.21 11.41.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.57C20.57 21.82 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/pranav-apppasheb-tekale-80630b41a" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:pranavtekale09@gmail.com" aria-label="Email">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll down</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to know me</span>
+        <h2>About <span class="accent">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="photo-frame">
+            <img id="aboutImg" src="images/profile.jpg" alt="Pranav Appasaheb Tekale"
+                 style="width:200px;height:220px;object-fit:cover;border-radius:var(--radius-lg);display:block;"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <svg id="aboutImgFallback" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="200" height="220" style="display:none">
+              <rect width="200" height="220" rx="16" fill="#1a1d2e"/>
+              <circle cx="100" cy="80" r="50" fill="#5b6cff" opacity="0.85"/>
+              <ellipse cx="100" cy="190" rx="70" ry="48" fill="#5b6cff" opacity="0.6"/>
+            </svg>
+            <div class="photo-badge">CS Student</div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h3>Computer Science Student &amp; Developer</h3>
+          <p>I'm <strong>Pranav Appasaheb Tekale</strong>, a Computer Science undergraduate passionate about <strong>Artificial Intelligence</strong>, <strong>Web Development</strong>, <strong>Software Development</strong>, and <strong>Problem Solving</strong>.</p>
+          <p>I enjoy building modern web applications, AI tools and automation systems. When I'm not coding, I'm participating in hackathons or exploring new technologies.</p>
+          <div class="about-info-grid">
+            <div class="info-item"><span class="info-label">Name</span><span class="info-value">Pranav Appasaheb Tekale</span></div>
+            <div class="info-item"><span class="info-label">Degree</span><span class="info-value">B.Sc Computer Science</span></div>
+            <div class="info-item"><span class="info-label">College</span><span class="info-value">Pratibha College, Pune</span></div>
+            <div class="info-item"><span class="info-label">CGPA</span><span class="info-value">9.18 / 10</span></div>
+            <div class="info-item"><span class="info-label">Status</span><span class="info-value"><span class="status-dot"></span> Available for Internship</span></div>
+            <div class="info-item"><span class="info-label">Languages</span><span class="info-value">English, Hindi, Marathi</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ EDUCATION ░░ -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My journey</span>
+        <h2>Edu<span class="accent">cation</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot active-dot"></div>
+          <div class="timeline-card active-card">
+            <span class="timeline-year">2025 – Present</span>
+            <h3>B.Sc Computer Science</h3>
+            <p class="timeline-inst">Pratibha College of Commerce and Computer Studies, Pune</p>
+            <p>Currently pursuing B.Sc CS with a strong focus on AI/ML, Web Development, and Software Engineering. Actively involved in coding clubs and technical events.</p>
+            <span class="timeline-badge current-badge">CGPA: 9.18</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SKILLS ░░ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I know</span>
+        <h2>My <span class="accent">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Programming
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div><span class="skill-pct">90%</span></div>
+            <div class="skill-item"><span>JavaScript</span><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-item"><span>Java</span><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div><span class="skill-pct">70%</span></div>
+            <div class="skill-item"><span>C / C++</span><div class="skill-bar"><div class="skill-fill" data-w="65"></div></div><span class="skill-pct">65%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Web Development
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item"><span>HTML</span><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div><span class="skill-pct">95%</span></div>
+            <div class="skill-item"><span>CSS</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div><span class="skill-pct">90%</span></div>
+            <div class="skill-item"><span>React.js</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div><span class="skill-pct">82%</span></div>
+            <div class="skill-item"><span>Node.js</span><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div><span class="skill-pct">78%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            AI / ML
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item"><span>TensorFlow</span><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div><span class="skill-pct">72%</span></div>
+            <div class="skill-item"><span>Scikit-learn</span><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div><span class="skill-pct">78%</span></div>
+            <div class="skill-item"><span>NLP / LLMs</span><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div><span class="skill-pct">70%</span></div>
+            <div class="skill-item"><span>OpenAI API</span><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Tools &amp; DevOps
+          </h3>
+          <div class="skill-list">
+            <div class="skill-item"><span>Git / GitHub</span><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-item"><span>MongoDB</span><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div><span class="skill-pct">72%</span></div>
+            <div class="skill-item"><span>Docker</span><div class="skill-bar"><div class="skill-fill" data-w="60"></div></div><span class="skill-pct">60%</span></div>
+            <div class="skill-item"><span>Linux</span><div class="skill-bar"><div class="skill-fill" data-w="68"></div></div><span class="skill-pct">68%</span></div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Tech Badges -->
+      <div class="tech-badges reveal">
+        <span class="badge">Python</span><span class="badge">JavaScript</span><span class="badge">React</span>
+        <span class="badge">Node.js</span><span class="badge">MongoDB</span><span class="badge">TensorFlow</span>
+        <span class="badge">OpenAI API</span><span class="badge">Git</span><span class="badge">HTML</span>
+        <span class="badge">CSS</span><span class="badge">Java</span><span class="badge">Linux</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ EXPERIENCE ░░ -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Work history</span>
+        <h2>Exper<span class="accent">ience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">Internship</span>
+            <h3>IT Firm — Developer Intern</h3>
+            <p class="timeline-inst">IT Firm</p>
+            <p>Worked on small-scale projects and collaborated with experienced developers. Learned Git workflow and version control best practices. Developed responsive websites and contributed to team sprints.</p>
+            <div class="project-tags"><span>AI</span><span>Analytics</span><span>Python</span><span>Git</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've built</span>
+        <h2>Pro<span class="accent">jects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Social Media Agent -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#0f1121"/>
+              <rect x="20" y="20" width="165" height="160" rx="8" fill="#1a1d2e"/>
+              <!-- Trend chart -->
+              <polyline points="35,140 60,100 85,120 110,70 135,90 160,50 175,80" fill="none" stroke="#5b6cff" stroke-width="2" opacity="0.85"/>
+              <circle cx="110" cy="70" r="5" fill="#5b6cff" opacity="0.9"/>
+              <!-- Sentiment meter -->
+              <rect x="205" y="20" width="175" height="75" rx="8" fill="#1a1d2e"/>
+              <rect x="220" y="55" width="50" height="8" rx="4" fill="#22c55e" opacity="0.7"/>
+              <rect x="220" y="69" width="30" height="8" rx="4" fill="#f59e0b" opacity="0.6"/>
+              <rect x="220" y="83" width="70" height="8" rx="4" fill="#5b6cff" opacity="0.5"/>
+              <!-- Competitors panel -->
+              <rect x="205" y="105" width="175" height="75" rx="8" fill="#1a1d2e"/>
+              <circle cx="230" cy="135" r="14" fill="#5b6cff" opacity="0.5"/>
+              <circle cx="265" cy="135" r="10" fill="#5b6cff" opacity="0.35"/>
+              <circle cx="295" cy="135" r="12" fill="#5b6cff" opacity="0.45"/>
+              <rect x="215" y="155" width="155" height="6" rx="3" fill="#5b6cff" opacity="0.2"/>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">View Project</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Social Media Agent</h3>
+            <p>An AI-powered social media analysis platform that monitors trends, tracks audience sentiment, analyzes competitors, and provides intelligent content suggestions.</p>
+            <div class="project-tags">
+              <span>Python</span><span>React</span><span>Node.js</span><span>OpenAI API</span><span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.82 8.21 11.41.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.57C20.57 21.82 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Chatbot -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#0f1121"/>
+              <rect x="30" y="20" width="340" height="160" rx="10" fill="#1a1d2e"/>
+              <!-- Chat bubbles -->
+              <rect x="50" y="40" width="200" height="28" rx="14" fill="#5b6cff" opacity="0.7"/>
+              <rect x="50" y="44" width="160" height="20" rx="10" fill="#5b6cff" opacity="0.3"/>
+              <rect x="155" y="82" width="185" height="28" rx="14" fill="#1e293b"/>
+              <rect x="175" y="86" width="140" height="20" rx="10" fill="#5b6cff" opacity="0.2"/>
+              <rect x="50" y="124" width="170" height="28" rx="14" fill="#5b6cff" opacity="0.7"/>
+              <!-- Bot icon -->
+              <circle cx="340" cy="96" r="22" fill="#5b6cff" opacity="0.18"/>
+              <rect x="328" y="84" width="24" height="18" rx="6" fill="#5b6cff" opacity="0.6"/>
+              <circle cx="334" cy="90" r="2.5" fill="#fff" opacity="0.9"/>
+              <circle cx="346" cy="90" r="2.5" fill="#fff" opacity="0.9"/>
+              <path d="M332 97 Q340 103 348 97" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">View Project</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>AI Chatbot</h3>
+            <p>An intelligent AI chatbot developed using Large Language Models (LLMs) capable of answering user queries, holding context-aware conversations, and providing helpful responses.</p>
+            <div class="project-tags">
+              <span>Python</span><span>LLMs</span><span>OpenAI API</span><span>Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.82 8.21 11.41.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.57C20.57 21.82 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Website -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="200" fill="#0f1121"/>
+              <!-- Browser chrome -->
+              <rect x="30" y="20" width="340" height="160" rx="8" fill="#1a1d2e"/>
+              <rect x="30" y="20" width="340" height="28" rx="8" fill="#0f1121"/>
+              <circle cx="52" cy="34" r="5" fill="#ff5f56" opacity="0.8"/>
+              <circle cx="70" cy="34" r="5" fill="#ffbd2e" opacity="0.8"/>
+              <circle cx="88" cy="34" r="5" fill="#27c93f" opacity="0.8"/>
+              <rect x="110" y="26" width="220" height="16" rx="8" fill="#1a1d2e"/>
+              <!-- Page content -->
+              <rect x="50" y="60" width="80" height="50" rx="4" fill="#5b6cff" opacity="0.5"/>
+              <rect x="145" y="60" width="220" height="12" rx="4" fill="#5b6cff" opacity="0.35"/>
+              <rect x="145" y="80" width="180" height="10" rx="4" fill="#5b6cff" opacity="0.22"/>
+              <rect x="145" y="98" width="140" height="10" rx="4" fill="#5b6cff" opacity="0.18"/>
+              <rect x="50" y="126" width="290" height="8" rx="4" fill="#5b6cff" opacity="0.2"/>
+              <rect x="50" y="142" width="240" height="8" rx="4" fill="#5b6cff" opacity="0.15"/>
+              <rect x="50" y="158" width="90" height="18" rx="5" fill="#5b6cff" opacity="0.6"/>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">View Project</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>A modern, fully responsive personal portfolio website showcasing projects, skills, education, and experience with smooth animations and a particle canvas background.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.82 8.21 11.41.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.57C20.57 21.82 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CERTIFICATES ░░ -->
+  <section class="section section-alt" id="certificates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Credentials</span>
+        <h2>Certifi<span class="accent">cations</span></h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div class="cert-body">
+            <h3>Getting Started with Artificial Intelligence</h3>
+            <p class="cert-issuer">Coursera / IBM</p>
+            <p class="cert-date">Issued: 2026</p>
+          </div>
+          <div class="cert-actions">
+            <button class="cert-btn" onclick="openCertModal('images/certificates/Artificalintelegence certificate.png')">View</button>
+            <a href="images/certificates/Artificalintelegence certificate.png" download="Getting-Started-AI-Pranav-Tekale.png" class="cert-btn cert-btn-dl">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="cert-body">
+            <h3>Getting Started with Cybersecurity</h3>
+            <p class="cert-issuer">Coursera / IBM</p>
+            <p class="cert-date">Issued: Jun 26, 2026</p>
+          </div>
+          <div class="cert-actions">
+            <button class="cert-btn" onclick="openCertModal('images/certificates/Cybercerti.png')">View</button>
+            <a href="images/certificates/Cybercerti.png" download="Getting-Started-Cybersecurity-Pranav-Tekale.png" class="cert-btn cert-btn-dl">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="cert-body">
+            <h3>Troubleshoot Your Code Using IBM Bob</h3>
+            <p class="cert-issuer">Coursera / IBM</p>
+            <p class="cert-date">Issued: 2026</p>
+          </div>
+          <div class="cert-actions">
+            <button class="cert-btn" onclick="openCertModal('images/certificates/Ibm bob certificate.png')">View</button>
+            <a href="images/certificates/Ibm bob certificate.png" download="Troubleshoot-IBM-Bob-Pranav-Tekale.png" class="cert-btn cert-btn-dl">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ ACHIEVEMENTS ░░ -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Recognition</span>
+        <h2>Achieve<span class="accent">ments</span></h2>
+      </div>
+      <div class="ach-grid">
+        <div class="ach-card reveal">
+          <div class="ach-trophy">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f4c430" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+          </div>
+          <div>
+            <h3>Academic Excellence — CGPA 9.18</h3>
+            <p>Maintaining a stellar CGPA of 9.18/10 in B.Sc Computer Science at Pratibha College, Pune, demonstrating consistent academic performance.</p>
+          </div>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ach-trophy">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c0c0c0" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div>
+            <h3>AI Project Recognition</h3>
+            <p>Built an award-recognized AI-powered social media analysis platform that gained appreciation for its use of cutting-edge LLM integrations.</p>
+          </div>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ach-trophy">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#5b6cff" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div>
+            <h3>Open Source Contributor</h3>
+            <p>Active contributor to open-source projects on GitHub, with multiple contributions to Python and web development repositories.</p>
+          </div>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ach-trophy">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f4a430" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <h3>Problem Solver</h3>
+            <p>Consistent participant in competitive programming contests and hackathons, honing algorithmic thinking and real-world problem solving skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's talk</span>
+        <h2>Get In <span class="accent">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>I'm currently open to internships, collaborative projects, and freelance opportunities. Feel free to reach out!</p>
+          <div class="contact-items">
+            <a href="mailto:pranavtekale09@gmail.com" class="contact-item">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><span class="ci-label">Email</span><span class="ci-value">pranavtekale09@gmail.com</span></div>
+            </a>
+            <a href="https://www.linkedin.com/in/pranav-apppasheb-tekale-80630b41a" class="contact-item" target="_blank" rel="noopener">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+              <div><span class="ci-label">LinkedIn</span><span class="ci-value">linkedin.com/in/pranav-apppasheb-tekale</span></div>
+            </a>
+            <a href="https://github.com/pranavtekale09" class="contact-item" target="_blank" rel="noopener">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.82 8.21 11.41.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.57C20.57 21.82 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+              <div><span class="ci-label">GitHub</span><span class="ci-value">github.com/pranavtekale09</span></div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="Internship Opportunity" required />
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="Hi Pranav, I'd like to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Message sent successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="nav-logo">PAT<span class="accent">.</span></span>
+          <p>Pranav Appasaheb Tekale — Computer Science Student.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/pranavtekale09" aria-label="GitHub" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.82 8.21 11.41.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.57C20.57 21.82 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/pranav-apppasheb-tekale-80630b41a" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:pranavtekale09@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Pranav Appasaheb Tekale. Made with ❤ using HTML, CSS &amp; JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ░░ CERT MODAL ░░ -->
+  <div id="certModal" class="cert-modal" onclick="closeCertModal()">
+    <div class="cert-modal-box" onclick="event.stopPropagation()">
+      <button class="cert-modal-close" onclick="closeCertModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <img id="certModalImg" src="" alt="Certificate" />
+      <a id="certModalDl" href="" download class="btn btn-primary" style="margin-top:16px;align-self:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Certificate
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
